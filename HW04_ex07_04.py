@@ -22,16 +22,27 @@
 ################################################################################
 # Imports
 
+#######This is incomplete..Dont evaluate
 
 # Body
-
+def eval_loop():
+	s = ''
+	while True:
+		input_str = raw_input ("Enter an expression: ")
+		if input_str == 'done':
+			break
+		try:
+			eval(input_str)
+		except Exception, e:
+			print "Enter a valid expression"
+		else:
+			print eval(input_str)
 
 
 
 ################################################################################
 def main():
-    pass # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    eval_loop()
     
 
 if __name__ == '__main__':
